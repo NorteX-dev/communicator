@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<body>
+
+<div class="ui container pt-5">
+    <h1>Register</h1>
+    <div id="errorbox"></div>
+
+    <form action="/auth/register" method="post" id="form" class="ui form">
+        <div>
+            <label for="username">Username:<span class="text-red-600">*</span></label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="email">Email:<span class="text-red-600">*</span></label>
+            <input type="email" id="email" name="email">
+            <p class="text-gray-400 text-s">When you register, you will be asked to <span class="text-red-600">confirm this email</span>.</p>
+        </div>
+        <div>
+            <label for="password">Password:<span class="text-red-600">*</span></label>
+            <input type="password" id="password" name="password">
+            <p class="text-gray-400 text-s">Password should be at least <span class="text-red-600">6</span> characters long.</p>
+        </div>
+        <div>
+            <label for="passwordconfirm">Confirm password:<span class="text-red-600">*</span></label>
+            <input type="password" id="passwordconfirm" name="passwordconfirm">
+        </div>
+        <input type="submit" value="Register" class="ui button primary big">
+        <a href="/auth/login">Already registered? Login</a>
+    </form>
+</div>
+
+<script src="/js/displayError.js"></script>
+
+</body>
+</html>
